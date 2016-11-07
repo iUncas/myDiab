@@ -83,12 +83,6 @@ var data = <TMPL_VAR NAME=JSROWS>;
 </script>
 </head>
 <body>
-<div id="top" class="global-nav-bar">
-<p id="okoo" class="oko"> myDiab </p>
-</div>
-<div id="top+1" class="global-image">
-<image src="images/cover6.jpg" width="100%>
-</div>
 <nav class="navbar navbar-default navbar-fixed-top">
 <div id="top+2" class="container22">
 <div id="top+2+4" class="global-menu-bar-4">
@@ -108,12 +102,7 @@ var data = <TMPL_VAR NAME=JSROWS>;
 </select>
 </form>
 </div>
-<!-- cookies alert>
-<div class="alert alert-warning alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Warning!</strong> Better check yourself, you're not looking too good.
-</div>
--->
+
 <div id="top+2+3" class="global-menu-bar-3">
 </div>
 <div id="top+2+2" class="global-menu-bar-2">
@@ -130,6 +119,48 @@ var data = <TMPL_VAR NAME=JSROWS>;
 </div>
 </div>
 </nav>
+<div id="top" class="global-nav-bar">
+<p id="okoo" class="oko"> myDiab </p>
+</div>
+<div id="top+1" class="global-image">
+<image src="images/cover6.jpg" width="100%>
+</div>
+<!--<nav class="navbar navbar-default navbar-fixed-top">
+<div id="top+2" class="container22">
+<div id="top+2+4" class="global-menu-bar-4">
+</div>
+<div id="top+2+1" class="global-menu-bar-1">
+<br>
+<form action="home1.pl" method="POST">
+<select name="myselect" id="myselect" onchange="this.form.submit()">
+<otpioan value="" disabled select>Please select results </options>
+<option value="R"> MORNING </option>
+<option value="L"> LUNCHTIME </option>
+<option value="A"> AFTERNOON </option>
+<option value="S"> SUPPER </option>
+<option value="N"> NIGHT </option>
+<option value="HGB"> GLYCATED HEMOGLOBIN </option>
+<option value="%"> BACK T2O HOME </option>
+</select>
+</form>
+</div>
+
+<div id="top+2+3" class="global-menu-bar-3">
+</div>
+<div id="top+2+2" class="global-menu-bar-2">
+<p><TMPL_VAR NAME="GREETING"> <TMPL_VAR NAME="USER"></p>
+<p><form action="home1.pl" method="POST">
+<select name="setting" id="setting" onchange="this.form.submit()"?>
+<option value="" disabled select> MORE </option>
+<option value="1"> Patient Check </option>
+<option value="2"> Settings </option>
+<option value="3"> Logout </option>
+</select>
+</form>
+</p>
+</div>
+</div>
+</nav>-->
 <div id="main" class="main-display">
 <br>
 <p style="font-size:14px"> <TMPL_VAR NAME=MESSAGE></p>
