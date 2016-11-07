@@ -62,9 +62,9 @@ if (defined($username)) {
             my $greeting = $sth1->fetchrow_array;
             $session->param("greeting", $greeting);
 ## fetching name for greetings ##
-            my $statement3 = qq{SELECT firstname from USERS where username="$username"};
+            my $statement3 = qq{SELECT firstname from USERS where username=?};
             my $sth3 = $dbh->prepare($statement3) or die $dbh->errstr;
-                $sth3->execute() or die  $sth1->errstr;
+                $sth3->execute($username) or die  $sth3->errstr;
             my $firstname = $sth3->fetchrow_array;
             $session->param("firstname", $firstname);
 ## end ##
