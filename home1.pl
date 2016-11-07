@@ -61,6 +61,13 @@ if (defined($username)) {
                 $sth1->execute() or die  $sth1->errstr;
             my $greeting = $sth1->fetchrow_array;
             $session->param("greeting", $greeting);
+## fetching name for greetings ##
+            my $statement3 = qq{SELECT firstname from USERS where username=$username};
+            my $sth3 = $dbh->prepare($statement3) or die $dbh->errstr;
+                $sth3->execute() or die  $sth1->errstr;
+            my $firstname = $sth3->fetchrow_array;
+            $session->param("firstname", $firstname);
+## end ##
 ## session logout active time ##
             $session->expire("1h");
             $session->expire("~logged-in", "10m");
@@ -70,6 +77,7 @@ if (defined($username)) {
             my $message = "GENERAL TEST RESULTS";
             $template->param("MESSAGE", $message);
             $template->param("GREETING", $greeting);
+			$template->param("FIRSTNAME", $firstname);
             $template->param(ROWS => $rows);
             $template->param(JSROWS =>  encode_json($rows));
             print $session->header();
@@ -116,6 +124,8 @@ if (defined($username)) {
             or die CGI::Session->errstr;
         my $username   = $session->param("username");
         my $greeting  = $session->param("greeting");
+        my $firstname = $session->param("firstname");
+        $template->param("FIRSTNAME", $firstname);		
         $template->param("USER", $username);
         $template->param("GREETING", $greeting);
         $template->param("MESSAGE", $message);
@@ -144,6 +154,8 @@ if (defined($username)) {
             or die CGI::Session->errstr;
         my $username   = $session->param("username");
         my $greeting  = $session->param("greeting");
+        my $firstname = $session->param("firstname");
+        $template->param("FIRSTNAME", $firstname);
         $template->param("USER", $username);
         $template->param("GREETING", $greeting);
         $template->param("MESSAGE", $message);
