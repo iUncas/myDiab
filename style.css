@@ -38,14 +38,14 @@ body { padding-top: 80px; }
 	width: 300px;
 	height: 80px;
 	float: left;
-	font-size:  16px;
+	font-size:  18px;
 /*background-color: #00f;*/
 	}
 .global-menu-bar-2 {
 	width: 200px;
 	height: 80px;
 	float: right;
-	font-size: 16px;
+	font-size: 18px;
 	text-align: right;
 	/*background-color: #00f;*/
 }
