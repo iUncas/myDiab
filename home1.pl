@@ -51,8 +51,8 @@ if (defined($username)) {
             my $statement = qq{SELECT DateT, Results FROM DRESULTS ORDER BY DateT DESC};
             my $sth = $dbh->prepare($statement) or die $dbh->errstr;
                 $sth->execute() or die $sth->errstr;
-            $session->param("username", $username);
-            $template->param("USER", $username);
+            #$session->param("username", $username);
+            #$template->param("USER", $username);
             $logger = 1;
             my $cookie = CGI::Cookie->new(-name=>$session->name, -value=>$session->id);
             my $dumb = 1 + int rand(33);
@@ -62,9 +62,9 @@ if (defined($username)) {
             my $greeting = $sth1->fetchrow_array;
             $session->param("greeting", $greeting);
 ## fetching name for greetings ##
-            my $statement3 = qq{SELECT firstname from USERS where username=?};
+            my $statement3 = qq{SELECT firstname from USERS where username="$username"};
             my $sth3 = $dbh->prepare($statement3) or die $dbh->errstr;
-                $sth3->execute($username) or die  $sth3->errstr;
+                $sth3->execute() or die  $sth3->errstr;
             my $firstname = $sth3->fetchrow_array;
             $session->param("firstname", $firstname);
 ## end ##
@@ -122,11 +122,11 @@ if (defined($username)) {
 ## loading session to fetch stored data eq. 2 username, greeting etc...
         $session = CGI::Session->load()
             or die CGI::Session->errstr;
-        my $username   = $session->param("username");
+        #my $username   = $session->param("username");
         my $greeting  = $session->param("greeting");
         my $firstname = $session->param("firstname");
         $template->param("FIRSTNAME", $firstname);		
-        $template->param("USER", $username);
+        #$template->param("USER", $username);
         $template->param("GREETING", $greeting);
         $template->param("MESSAGE", $message);
         $template->param(ROWS => $rows);
@@ -152,11 +152,11 @@ if (defined($username)) {
 ## loading session to fetch stored data eq. 2 username, greeting etc...
         $session = CGI::Session->load()
             or die CGI::Session->errstr;
-        my $username   = $session->param("username");
+        #my $username   = $session->param("username");
         my $greeting  = $session->param("greeting");
         my $firstname = $session->param("firstname");
         $template->param("FIRSTNAME", $firstname);
-        $template->param("USER", $username);
+        #$template->param("USER", $username);
         $template->param("GREETING", $greeting);
         $template->param("MESSAGE", $message);
         $template->param(ROWS => $rows);
