@@ -113,9 +113,9 @@ body { padding-top: 80px; }
 	color: #15343d;
 	width: 300px;
 	height: 450px;
-	font-size: 12px;
+	font-size: 15px;
 	font-family: "Tahoma";
-	background-color:  #00f;
+	background-color:  #f9f9f9;
     float: left;
 	margin-right: 30px;
     }
@@ -169,14 +169,15 @@ body { padding-top: 80px; }
         background-color: #00f;
        #f9fbff;
         }*/
-.container199 {
-    width: 300px;
-    height: 450px;
-    padding: 10px;
-    border: 1px solid #aaaaaa;
+.container299 {
+    color: #15343d;
+	width: 300px;
+	height: 450px;
+	font-size: 15px;
+	font-family: "Tahoma";
+	background-color:  #f9f9f9;
     float: left;
-    margin-right: 30px;
-    background-color:  #00f;
+	margin-right: 30px;
     }
    /* #container199:hover  {
         background-color: #0ff;
