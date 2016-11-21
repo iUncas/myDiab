@@ -168,6 +168,52 @@ body { padding-top: 80px; }
         background-color: #00f;
        #f9fbff;
         }*/
+.container155a {
+    width:300px;
+    height: 50px;
+    }
+.container188a {
+    float: left;
+    padding-top: 10px;
+    padding-left: 15px;
+    width: 250px;
+    height: 40px;
+	}
+  /*.container188:hover  {
+        background-color: #fff;
+        #f9fbff;
+        }*/
+#container199a {
+    padding-top: 10px;
+    float: left;
+    padding-left: 15px;
+    width: 50px;
+    height: 40px;
+	}
+   /* #container199:hover  {
+        background-color: #0ff;
+        #f9fbff;
+		}*/
+.container166a{
+    width:300px;
+    height: 350px;
+    padding-top: 10px;
+    padding-left: 15px;
+             }
+   /* .container166:hover  {
+        background-color: #0f0;
+        #f9fbff;
+		}*/
+.container177a {
+    width: 300px;
+    height:  50px;
+    padding-top: 10px;
+    padding-right: 15px;
+    }
+     /*.container177:hover  {
+        background-color: #00f;
+       #f9fbff;
+        }*/
 .container299 {
     color: #15343d;
 	width: 300px;
@@ -181,6 +227,52 @@ body { padding-top: 80px; }
    .container299:hover  {
         background-color: #b3bbbf;
      }
+	 .container155b {
+    width:300px;
+    height: 50px;
+    }
+.container188b {
+    float: left;
+    padding-top: 10px;
+    padding-left: 15px;
+    width: 250px;
+    height: 40px;
+	}
+  /*.container188:hover  {
+        background-color: #fff;
+        #f9fbff;
+        }*/
+#container199b {
+    padding-top: 10px;
+    float: left;
+    padding-left: 15px;
+    width: 50px;
+    height: 40px;
+	}
+   /* #container199:hover  {
+        background-color: #0ff;
+        #f9fbff;
+		}*/
+.container166b {
+    width:300px;
+    height: 350px;
+    padding-top: 10px;
+    padding-left: 15px;
+             }
+   /* .container166:hover  {
+        background-color: #0f0;
+        #f9fbff;
+		}*/
+.container177b {
+    width: 300px;
+    height:  50px;
+    padding-top: 10px;
+    padding-right: 15px;
+    }
+     /*.container177:hover  {
+        background-color: #00f;
+       #f9fbff;
+        }*/
 #table4 {
     border-collapse: collapse;
     /*border: 1px solid black;*/

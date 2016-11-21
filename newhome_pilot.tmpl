@@ -23,60 +23,7 @@
 <!--<link rel="stylesheet" href="navbar-fixed-top.css" rel="stylesheet">-->
 <!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.js"></script>-->
 <!--<script type="text/javascript" src="jquery.js"></script>-->
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
 
-
-<!-- highcharts -->
-<script type="text/javascript" script src="http://code.highcharts.com/highcharts.js"></script>
-<!--<script type="text/javascript" src="/js/themes/gray.js"></script>-->
-<script type="text/javascript" src="http://code.highcharts.com/modules/exporting.js"></script>
-<script type="text/javascript">
-
-if (!String.prototype.trim) {
-        (function() {
-                //make sure we trim BOM and NBSP
-                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-                return this.replace(rtrim, '');
-        }) ();
-}
-$(document).ready(function() {
-$('#example').DataTable({order: [[0, "desc"]]});
-var hdata = data.map(function(obj) {
-return {y: obj.Results.trim(), x: obj.DateT.trim()};
-});
-// previously ('#example').DataTable();
-// var myChart = Highcharts.chart('container', {
-$('#container').highcharts({
-chart: {
-type: 'line'
-},
-title: {
-text: 'Results'
-},
-xAxis: {
-categories: hdata.map(function(obj){return obj.x;})
-},
-yAxis: {
-title: {
-text: 'Results'
-}
-},
-plotOptions: {
-line: {
-dataLabels: {
-enabled: true
-},
-enableMouseTracking: false
-}
-},
-series: [{
-name: 'Glucose monitoring results, units: mg/dl',
-data: hdata.map(function(obj){return parseFloat(obj.y);})
-}]
-});
-});
-</script>
 <link rel="stylesheet" href="style2.css">
 <script type="text/javascript">
 var data = <TMPL_VAR NAME=JSROWS>;
@@ -243,7 +190,7 @@ var data = <TMPL_VAR NAME=JSROWS>;
 </div>
 <p style="font-size:14px"><TMPL_VAR NAME=MESSAGE></p>
 </div>
-</div>
+
 <!-- ooo -->
 <!--available for next items  customization -->
 <!--<div id="container33" class="container33"></div>-->
