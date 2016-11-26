@@ -28,6 +28,10 @@
 
 <link rel="stylesheet" href="style2.css">
 <script type="text/javascript">
+$( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
 var data = <TMPL_VAR NAME=JSROWS>;
 </script>
 </head>
@@ -77,7 +81,7 @@ var data = <TMPL_VAR NAME=JSROWS>;
 <div id="main" class="main-display"><!--addsaads-->
 <br>
 <br>
-<div id="container133" class="container133">
+<div id="container133" class="ui-state-default">
     <div id="container155" class="container155">
         <div id="container188" class="container188">
             <p> RECENT HIGHESTS @myDiab </p>
@@ -114,7 +118,7 @@ var data = <TMPL_VAR NAME=JSROWS>;
         <img src="images/mydiab.jpg" height="25" width="70" align="right"> 
     </div>
 </div>
-<div id="container144" class="container144">
+<div id="container144" class="class="ui-state-default"">
     <div id="container155" class="container155">
         <div id="container188" class="container188">
             <p> RECENT HIGHESTS @myDiab </p>
@@ -152,7 +156,7 @@ var data = <TMPL_VAR NAME=JSROWS>;
         <img src="images/mydiab.jpg" height="25" width="70" align="right"> 
     </div>
 	</div>
-<div id="container299" class="container299">
+<div id="container299" class="class="ui-state-default"">
     <div id="container155" class="container155">
         <div id="container188" class="container188">
             <p> RECENT HIGHESTS @myDiab </p>
