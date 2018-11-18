@@ -37,7 +37,8 @@ my $parameter =    "%";
 ########################################	 
 
 if (defined($username)) {
-    my $dbh = DBI->connect("DBI:mysql:database=mysql;host=localhost;port=2009", "root", "wojtek29")
+    my $dbh = DBI->connect("DBI:mysql:database=unkas22;host=unkas.ckgxvc0dh42m.eu-central-1.rds.amazonaws.com;port=3306", "unkas", "wojtek29")
+#    my $dbh = DBI->connect("DBI:mysql:database=mysql;host=localhost;port=2009", "root", "wojtek29")
     or die $DBI::errstr;
     my $statement = qq{SELECT username, password from USERS where username=? and password=?};
     my $sth = $dbh->prepare($statement) or die $dbh->errstr;
